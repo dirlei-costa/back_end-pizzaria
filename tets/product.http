@@ -1,0 +1,46 @@
+# Retorna todos os products
+GET https://locahost:300/products
+Content-Type: application/json
+###
+
+# Retorna detalhes de um produto(ID)
+GET https://locahost:300/products/
+Content-Type: application/json
+
+{
+   "productId": 11
+}
+###
+
+# Altera um produto
+PUT https://locahost:300/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoic2lsdmFAZ21haWwuY29tIiwiaWF0IjoxNjg4MTIzMzQ4LCJleHAiOjE2ODgxMzQxNDh9.ZgUcW-NnZmjCQsxVUItCbxiHxTlld232MNhveftEYOM
+
+{
+   "name": "Pizza Doce",
+   "price": 69.90,
+   "productId":9
+
+}
+###
+
+# Adicionar produto!
+POST  https://locahost:300/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoic2lsdmFAZ21haWwuY29tIiwiaWF0IjoxNjg3OTQ5MTQ5LCJleHAiOjE2ODc5NTk5NDl9.58SuIrKwowJNEXT-KHwQKluVu46x26RH6X5fGKAnLrI
+
+{
+   "name" : "Pizza Dn Maria",
+   "price" : 59.90 
+}
+###
+
+# Remove um produto
+DELETE https://locahost:300/products/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoic2lsdmFAZ21haWwuY29tIiwiaWF0IjoxNjg4MTIzMzQ4LCJleHAiOjE2ODgxMzQxNDh9.ZgUcW-NnZmjCQsxVUItCbxiHxTlld232MNhveftEYOM
+
+{
+   "productId": 11
+}

@@ -3,9 +3,9 @@ const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 
-const rotaProdutos = require("./routes/produtos");
-const rotaPedidos = require("./routes/pedidos");
-const rotaUsuarios = require("./routes/usuarios");
+const productRoute = require("./routes/products-route");
+const orderRoute = require("./routes/orders-route");
+const userRoute = require("./routes/user-route");
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false })); //apenas dados simples
@@ -28,9 +28,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/produtos", rotaProdutos);
-app.use("/pedidos", rotaPedidos);
-app.use("/usuarios", rotaUsuarios);
+app.use("/products", productRoute);
+app.use("/orders", orderRoute);
+app.use("/users", userRoute);
 
 app.use((req, res, next) => {
   const erro = new Error("Não encontrado!");
