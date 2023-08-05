@@ -24,7 +24,7 @@ exports.getOrders = async (req, res, next) => {
           request: {
             type: "GET",
             description: "Retorna detalhes de um produto específico!",
-            url: "http://localhost:3000/orders/" + order.orderId,
+            url: process.env.URL_API + "orders/" + order.orderId,
           },
         };
       }),
@@ -61,7 +61,7 @@ exports.postOrders = async (req, res, next) => {
         request: {
           type: "GET",
           description: "Retorna todos os pedidos!",
-          url: "http://localhost:3000/orders",
+          url: process.env.URL_API + "orders",
         },
       },
     };
@@ -89,7 +89,7 @@ exports.getIdOrders = async (req, res, next) => {
         request: {
           type: "GET",
           description: "Retorna todos os pedidos!",
-          url: "http://localhost:3000/orders",
+          url: process.env.URL_API + "orders",
         },
       },
     };
@@ -108,7 +108,7 @@ exports.deleteOrders = async (req, res, next) => {
       request: {
         type: "POST",
         description: "insere um pedido.",
-        url: "http://localhost:3000/orders",
+        url: process.env.URL_API + "orders",
         body: {
           productId: "Number",
           quantity: "Number",

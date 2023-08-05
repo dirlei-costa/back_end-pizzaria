@@ -28,11 +28,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtY
 # Adicionar produto!
 POST  https://locahost:300/products
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoic2lsdmFAZ21haWwuY29tIiwiaWF0IjoxNjg3OTQ5MTQ5LCJleHAiOjE2ODc5NTk5NDl9.58SuIrKwowJNEXT-KHwQKluVu46x26RH6X5fGKAnLrI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoic2lsdmFAZ21haWwuY29tIiwiaWF0IjoxNjkxMDcxNDUxLCJleHAiOjE2OTEwODIyNTF9.u3akKThUhmTrvZbn9ZDwu8BZGt5sRX9KPA74ePOD-sE
 
 {
-   "name" : "Pizza Dn Maria",
+   "name" : "testing",
    "price" : 59.90 
+   
 }
 ###
 

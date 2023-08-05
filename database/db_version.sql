@@ -2,13 +2,14 @@
 
 show tables;
 
-DROP TABLE orders;
+DROP TABLE products;
 
 CREATE TABLE
     IF NOT EXISTS products (
         productId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
         name VARCHAR(45),
         price FLOAT,
+        descriptionProduct VARCHAR(500)
     );
 
 CREATE TABLE

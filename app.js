@@ -8,6 +8,7 @@ const orderRoute = require("./routes/orders-route");
 const userRoute = require("./routes/user-route");
 
 app.use(morgan("dev"));
+app.use("/uploads", express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: false })); //apenas dados simples
 app.use(bodyParser.json()); //somente dados json
 
@@ -18,12 +19,12 @@ app.use((req, res, next) => {
     "Origin",
     "X-Requrested-with",
     "Content-Type",
-    "Accep",
+    "Accept",
     "Authorization"
   );
   if (req.method === "OPTIONS") {
-    res.header("Acess-Controç-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
-    return res.status(200).send("Ok");
+    res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
+    return res.status(200).send({});
   }
   next();
 });

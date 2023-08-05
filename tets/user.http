@@ -1,11 +1,12 @@
 # Cadastra um Usuário
 POST http://localhost:3000/users/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoic2lsdmFAZ21haWwuY29tIiwiaWF0IjoxNjkxMDY5NDQwLCJleHAiOjE2OTEwODAyNDB9.IpxH24Noia0RtQIkpCpr7Ue9294zJuX3RbvtjdPqqJU
 
 
 
 {
-    "email": pizza@villa.com,
+    "email": pizzariaformaza@.com,
     "password": 123456
 }
 
@@ -16,8 +17,8 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 
+
 {
-    "email": pizza@villa.com,
-    "password": 123456
+    "email": "silva@gmail.com",
+    "password": "123456"
 }
-###
